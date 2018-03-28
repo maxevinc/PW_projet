@@ -15,7 +15,7 @@
         </ion-thumbnail>
         <h2>{{current.title}}</h2>
         <p>{{current.author}} • {{current.date}}</p>
-        <button ion-button clear item-end>View</button>
+        <button ion-button clear item-end [navPush]="detailsPage" [navParams]="current">View</button>
       </ion-item>
     </ion-list>
    </p>

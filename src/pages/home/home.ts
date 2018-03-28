@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
+import { DetailsPage } from '../details/details';
 
 export interface Result {
   title : string;
@@ -19,10 +20,15 @@ const results : Result[] = [
   templateUrl: 'home.html'
 })
 export class HomePage {
+  detailsPage : any;
   results : Result[];
+  params : Result;
+
   constructor(public navCtrl: NavController) {
     this.results = [];
+    this.detailsPage = DetailsPage;
   }
+
   onInput(event : any) : void{
     const query : string = event.target.value;
     this.results = query? results : [];

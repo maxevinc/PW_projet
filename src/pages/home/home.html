@@ -14,7 +14,7 @@
           <img [src]="current.image">
         </ion-thumbnail>
         <h2>{{current.title}}</h2>
-        <p>{{current.author}} • {{current.date}}</p>
+        <p>Date : {{current.date}} • Vote : {{current.vote}}</p>
         <button ion-button clear item-end [navPush]="detailsPage" [navParams]="current">View</button>
       </ion-item>
     </ion-list>

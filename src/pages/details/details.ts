@@ -14,7 +14,7 @@ import { Result } from '../home/home';
   templateUrl: 'details.html',
 })
 
-export class DetailsPage {
+export class DetailsPage { 
   result : Result;
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.result = this.navParams.data;

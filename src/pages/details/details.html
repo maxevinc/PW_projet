@@ -15,8 +15,8 @@
 
 <ion-content padding>
   <ion-thumbnail item-start>
-    <img [src]="result.image">
+    <img [src]='"https://image.tmdb.org/t/p/original/".concat(result.poster_path)'>
   </ion-thumbnail>
-  <p>Date : {{result.date}} • Vote : {{result.vote}}</p>
+  <p>Date : {{result.release_date}} • Vote : {{result.vote_average}}</p>
   <p>{{result.overview}}</p>
 </ion-content>

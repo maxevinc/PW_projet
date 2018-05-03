@@ -1,9 +1,10 @@
 <ion-header>
   <ion-navbar>
-    <ion-searchbar
-      (ionInput)="onInput($event)">
-    </ion-searchbar>
+    <ion-title>Movies Data Base</ion-title>
   </ion-navbar>
+  <ion-searchbar
+    (ionInput)="onInput($event)">
+  </ion-searchbar>
 </ion-header>
 <ion-content padding>
   <p>
@@ -14,9 +15,9 @@
           <img [src]='"https://image.tmdb.org/t/p/original/".concat(current.poster_path)'>
         </ion-thumbnail>
         <h2>{{current.title}}</h2>
-        <p>Date : {{current.release_date}} • Vote : {{current.vote_average}}</p>
+        <p>Date : {{current.release_date | date}} • Vote : {{current.vote_average}}</p>
         <button ion-button clear item-end [navPush]="detailsPage" [navParams]="current">View</button>
       </ion-item>
     </ion-list>
    </p>
-</ion-content> 
+</ion-content>
